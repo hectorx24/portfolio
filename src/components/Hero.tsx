@@ -105,7 +105,7 @@ export function Hero() {
 
           <div className="aspect-[21/9] sm:aspect-[2.2/1] rounded-2xl overflow-hidden border border-slate-800 bg-black relative">
             <img
-              src="/profile/hector-dither-banner.png"
+              src="/profile/banner-dark.v9.svg"
               alt="Héctor López terminal identity map"
               className="w-full h-full object-cover object-center"
               loading="eager"
