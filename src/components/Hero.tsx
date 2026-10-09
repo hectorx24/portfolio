@@ -89,28 +89,14 @@ export function Hero() {
           </span>
         </div>
 
-        {/* Dither Terminal Window Preview */}
-        <div className="mt-12 rounded-3xl border border-slate-800 bg-slate-950/70 p-4 sm:p-6 backdrop-blur-xl shadow-2xl relative overflow-hidden text-left">
-          <div className="flex items-center justify-between pb-3 mb-4 border-b border-slate-800/80 text-xs font-mono text-slate-400">
-            <div className="flex items-center gap-2">
-              <span className="size-2.5 rounded-full bg-red-500/80 inline-block" />
-              <span className="size-2.5 rounded-full bg-yellow-500/80 inline-block" />
-              <span className="size-2.5 rounded-full bg-green-500/80 inline-block" />
-              <span className="ml-2 text-slate-300">aeterna-labs://hector-identity</span>
-            </div>
-            <div className="text-[11px] text-indigo-400">
-              ✦ LIVE SYSTEM IDENTITY // 1-BIT DITHER
-            </div>
-          </div>
-
-          <div className="aspect-[21/9] sm:aspect-[2.2/1] rounded-2xl overflow-hidden border border-slate-800 bg-black relative">
-            <img
-              src="/profile/banner-dark.v9.svg"
-              alt="Héctor López terminal identity map"
-              className="w-full h-full object-cover object-center"
-              loading="eager"
-            />
-          </div>
+        {/* Live System Terminal Profile Preview */}
+        <div className="mt-12 max-w-3xl mx-auto rounded-3xl overflow-hidden border border-slate-800/80 bg-slate-950/70 shadow-2xl backdrop-blur-xl p-2 sm:p-3 hover:border-indigo-500/40 transition-all">
+          <img
+            src="/profile/banner-dark.v9.svg"
+            alt="Héctor López Vim Terminal Profile"
+            className="w-full h-auto rounded-2xl block shadow-inner"
+            loading="eager"
+          />
         </div>
       </div>
     </section>
