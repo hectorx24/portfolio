@@ -133,9 +133,13 @@ export const FEATURED_PROJECTS: Project[] = [
     status: "Open Source · Verified on Chromecast",
     statusColor: "text-purple-400 border-purple-400/30 bg-purple-400/10",
     tagline: "An unofficial, open-source TV-first media interface tailored for the 10-foot living room experience and directional remote ergonomics.",
-    heroImage: "/projects/creator-tv-screen.png",
+    heroImage: "/projects/creator-tv-home.webp",
     gallery: [
-      "/projects/creator-tv-screen.png",
+      "/projects/creator-tv-home.webp",
+      "/projects/creator-tv-browse.webp",
+      "/projects/creator-tv-miniplayer.webp",
+      "/projects/creator-tv-audio.webp",
+      "/projects/creator-tv-video.webp",
     ],
     tags: ["React 19", "Android TV / Google TV", "D-pad Navigation", "ADB Tooling", "Open Source"],
     highlights: [
@@ -221,3 +225,190 @@ export const TECHNICAL_STACK = {
     { name: "IndexedDB / SQLite / Hardware Storage", role: "Local-first persistence, privacy-focused offline data", level: "Core" },
   ],
 };
+
+export interface ExperienceItem {
+  id: string;
+  role: string;
+  organization: string;
+  period: string;
+  location: string;
+  type: string;
+  badges: string[];
+  summary: string;
+  accomplishments: string[];
+}
+
+export const EXPERIENCE_DATA: ExperienceItem[] = [
+  {
+    id: "content-ai-producer",
+    role: "Creador de Contenido, Estratega de Redes & Productor IA",
+    organization: "Productor Independiente",
+    period: "2022 — Presente",
+    location: "Remoto · Sonora, México",
+    type: "Freelance / Independiente",
+    badges: ["YouTube & Redes", "IA Generativa", "Python CLI", "Video Editing"],
+    summary: "Diseño y ejecución integral de contenido audiovisual multiplataforma con automatización técnica y modelos generativos.",
+    accomplishments: [
+      "Diseño y ejecución de estrategias audiovisuales en YouTube, TikTok e Instagram, logrando altos índices de retención y engagement orgánico sostenido.",
+      "Implementación de pipelines con IA generativa (Claude, ChatGPT, Midjourney, ElevenLabs) para acelerar investigación de tendencias, generación de guiones y síntesis de voz.",
+      "Edición de video de alta dinámica en Adobe Premiere Pro y CapCut, aplicando storytelling estructurado y ganchos visuales (hooks) en los primeros 3 segundos.",
+      "Desarrollo de scripts en Python (SmartDownloader) para curaduría, descarga masiva y procesamiento automatizado por lotes de recursos multimedia y B-Roll.",
+    ],
+  },
+  {
+    id: "communications-lead",
+    role: "Líder de Comunicaciones & Estrategia de Campaña",
+    organization: "Coordinación Regional",
+    period: "2022",
+    location: "Sonora, México",
+    type: "Liderazgo de Comunicación",
+    badges: ["Estrategia Regional", "Comunicación Pública", "Analítica de Métricas"],
+    summary: "Dirección de la narrativa pública territorial y digital bajo estrictos cronogramas de publicación y análisis de métricas.",
+    accomplishments: [
+      "Dirección de la estrategia de comunicación digital y territorial, adaptando narrativas públicas para maximizar la conexión con diversos segmentos demográficos.",
+      "Supervisión del calendario de publicaciones y producción de materiales audiovisuales en redes sociales bajo cronogramas de alta exigencia.",
+      "Análisis de métricas de interacción pública para ajustar mensajes estratégicos en tiempo real y optimizar el alcance orgánico de la campaña.",
+    ],
+  },
+  {
+    id: "software-ai-consultant",
+    role: "Desarrollo de Software & Automatización Digital",
+    organization: "Consultoría Independiente · Aeterna Labs",
+    period: "2022 — Presente",
+    location: "Remoto · Sonora, México",
+    type: "Fundador & Consultor",
+    badges: ["Interfaces Web", "Prompt Engineering", "Full-Stack AI", "React / TS"],
+    summary: "Construcción de interfaces web interactivas, modelos de evaluación de prompts y clientes de televisión para sala.",
+    accomplishments: [
+      "Creación de interfaces web interactivas y responsivas (HTML5, CSS3, JavaScript, TypeScript, React) con diseño centrado en el usuario y captura de datos automatizada.",
+      "Diseño y evaluación de prompts complejos de IA, entrenando modelos de lenguaje para generar respuestas estructuradas (JSON Schemas), coherentes y empáticas.",
+      "Fundación de Aeterna Labs: arquitectura de productos independientes como Aura (diario onírico con memoria longitudinal), DualMind y Creator TV (cliente Android TV verificado en Chromecast).",
+    ],
+  },
+  {
+    id: "ecommerce-mercadolibre",
+    role: "Operaciones Digitales & Comercio Electrónico",
+    organization: "MercadoLibre Merchant Operations",
+    period: "2020 — 2022",
+    location: "Sonora, México",
+    type: "Comercio Electrónico",
+    badges: ["E-commerce", "Psicología del Consumidor", "Modelos Excel", "Operaciones"],
+    summary: "Gestión comercial, optimización de publicaciones y control analítico de inventarios en la plataforma líder de comercio electrónico.",
+    accomplishments: [
+      "Gestión y optimización de publicaciones comerciales aplicando principios de psicología del consumidor y copywriting persuasivo para maximizar conversiones.",
+      "Administración de canales de atención y resolución de objeciones comerciales críticas de compradores antes y después de la venta.",
+      "Monitoreo analítico de inventarios y control operativo de ventas digitales mediante modelos de datos estructurados en Microsoft Excel.",
+    ],
+  },
+];
+
+export interface EducationItem {
+  id: string;
+  degree: string;
+  institution: string;
+  period: string;
+  status: string;
+  badge: string;
+  details: string[];
+}
+
+export const EDUCATION_DATA: EducationItem[] = [
+  {
+    id: "itson-administration",
+    degree: "Licenciatura en Administración de Empresas",
+    institution: "Instituto Tecnológico de Sonora (ITSON)",
+    period: "2020 — 2024",
+    status: "Licenciado / Titulado",
+    badge: "Grado Universitario",
+    details: [
+      "Formación integral en dirección estratégica, economía empresarial, finanzas corporativas, mercadotecnia estratégica y comportamiento organizacional.",
+      "Investigación académica en Psicología del Consumidor & Macroeconomía: análisis sobre el impacto de las tendencias de consumo y psicología de audiencias en la efectividad del marketing digital.",
+      "Sólida base analítica para entender viabilidad económica de productos, pricing, optimización de recursos y modelos de negocio en software.",
+    ],
+  },
+  {
+    id: "linguatec-english",
+    degree: "Programa Avanzado de Idioma Inglés (Certificación Bilingüe Profesional)",
+    institution: "Centro de Idiomas Linguatec",
+    period: "Certificación Bilingüe",
+    status: "Inglés Avanzado / C1 Profesional",
+    badge: "Certificación de Idioma",
+    details: [
+      "Dominio fluido oral y escrito para entornos corporativos internacionales, documentación técnica en inglés y trabajo remoto con equipos globales.",
+      "Capacidad demostrada para diseñar interfaces bilingües, redactar documentación técnica y liderar comunicaciones comerciales internacionales.",
+    ],
+  },
+];
+
+export interface CapabilityGroup {
+  id: string;
+  title: string;
+  subtitle: string;
+  iconName: string;
+  summary: string;
+  skills: Array<{ name: string; context: string }>;
+}
+
+export const CAPABILITIES_DATA: CapabilityGroup[] = [
+  {
+    id: "product-business",
+    title: "Producto & Estrategia de Negocios",
+    subtitle: "Visión administrativa, viabilidad comercial y psicología",
+    iconName: "Briefcase",
+    summary: "Integración de fundamentos de Administración de Empresas (ITSON), psicología del consumidor y liderazgo de producto para diseñar software comercialmente sostenible.",
+    skills: [
+      { name: "Administración de Empresas", context: "Dirección estratégica, finanzas y modelos de negocio" },
+      { name: "Psicología del Consumidor", context: "Comportamiento de usuario y copywriting persuasivo" },
+      { name: "Operaciones E-commerce", context: "Gestión de conversiones en MercadoLibre y tiendas digitales" },
+      { name: "Estrategia de Campaña", context: "Coordinación regional y calendarios editoriales de alto ritmo" },
+      { name: "Definición de Producto", context: "Del concepto abstracto a arquitecturas funcionales compilables" },
+      { name: "Gestión de Recursos", context: "Desarrollo independiente (bootstrapped) con ejecución ágil" },
+    ],
+  },
+  {
+    id: "data-analytics",
+    title: "Datos & Análisis Empírico",
+    subtitle: "Modelado cuantitativo, métricas de retención y control operativo",
+    iconName: "BarChart3",
+    summary: "Uso riguroso de modelos analíticos en hojas de cálculo y telemetría de retención en plataformas digitales para toma de decisiones informadas.",
+    skills: [
+      { name: "Modelado en Excel Avanzado", context: "Control de inventarios, proyecciones y costos operativos" },
+      { name: "Métricas de Audiencia & Retención", context: "Telemetría en YouTube Studio, TikTok Analytics e Instagram" },
+      { name: "Análisis Macro & Microeconómico", context: "Investigación académica ITSON en comportamiento de mercado" },
+      { name: "Esquemas Estructurados (JSON/Zod)", context: "Garantía de integridad de datos en pipelines de IA" },
+      { name: "Optimización de Embudo (Funnel)", context: "A/B testing empírico en miniaturas, ganchos y conversiones" },
+      { name: "Auditoría de Rendimiento", context: "Control de memoria, tasas de abandono y tiempos de carga" },
+    ],
+  },
+  {
+    id: "software-ai",
+    title: "Software & Sistemas de Inteligencia Artificial",
+    subtitle: "Ingeniería full-stack, contratos estrictos y clientes TV",
+    iconName: "Cpu",
+    summary: "Desarrollo técnico de extremo a extremo: pipelines de IA generativa con JSON estricto, interfaces reactivas modernas y adaptación a hardware de sala.",
+    skills: [
+      { name: "Python (Automatización & Scraping)", context: "Herramientas CLI, batch processing, SmartDownloader" },
+      { name: "TypeScript & JavaScript (ESNext)", context: "Tipado estricto, Web APIs nativas, arquitecturas limpias" },
+      { name: "React 19 / Next.js / Vite", context: "Componentes reactivos, SSR, empaquetado optimizado" },
+      { name: "Modelos de Lenguaje (Claude, Gemini, GPT)", context: "Structured outputs, memory profiling, prompt tuning" },
+      { name: "Android TV & Living Room UX", context: "Integración IME nativa, navegación D-pad, ADB tooling" },
+      { name: "Web Audio API (DSP Puro)", context: "Síntesis procedural de ruido, filtros IIR, binaural stereo" },
+    ],
+  },
+  {
+    id: "content-media",
+    title: "Contenido & Producción Audiovisual",
+    subtitle: "Storytelling, retención en los primeros 3 segundos y pipelines multimedia",
+    iconName: "Video",
+    summary: "Experiencia probada en la economía de creadores: creación de video de alta retención, guiones estructurados y automatización con IA generativa.",
+    skills: [
+      { name: "Estrategia Audiovisual Multiplataforma", context: "Canales en YouTube, TikTok, Instagram con engagement orgánico" },
+      { name: "Edición en Premiere Pro & CapCut", context: "Montaje de alta dinámica, pacing narrativo y transiciones" },
+      { name: "Hooks & Retención de Audiencia", context: "Arquitectura de guiones enfocados en retención inicial de 3s" },
+      { name: "IA de Voz & Gráfica (ElevenLabs, Midjourney)", context: "Generación de locución clonada, b-roll conceptual y arte" },
+      { name: "Curaduría & Scraping de B-Roll", context: "Sistemas para recolección y etiquetado rápido de metraje" },
+      { name: "Comunicación Pública & Storytelling", context: "Transmisión clara de conceptos técnicos a audiencias masivas" },
+    ],
+  },
+];
+

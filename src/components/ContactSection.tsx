@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Mail, Copy, Check, ExternalLink, ArrowUpRight, Terminal } from "lucide-react";
+import { Mail, Copy, Check, ExternalLink, ArrowUpRight, Terminal, FileText } from "lucide-react";
 import { GithubIcon, LinkedinIcon } from "./Icons";
 
 export function ContactSection() {
@@ -112,6 +112,21 @@ export function ContactSection() {
                     <span>Studio // aeternalabs.lat</span>
                   </div>
                   <ArrowUpRight className="size-4 text-slate-500" />
+                </a>
+              </li>
+
+              <li>
+                <a
+                  href="/cv/hector-lopez-cv.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center justify-between p-3 rounded-xl bg-cyan-950/40 border border-cyan-500/40 text-cyan-200 hover:text-white hover:border-cyan-400 transition-colors"
+                >
+                  <div className="flex items-center gap-3">
+                    <FileText className="size-4 text-cyan-400" />
+                    <span>Official Résumé // hector-lopez-cv.pdf</span>
+                  </div>
+                  <ArrowUpRight className="size-4 text-cyan-400" />
                 </a>
               </li>
 

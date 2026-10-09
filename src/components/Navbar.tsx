@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Terminal, Menu, X, ArrowUpRight } from "lucide-react";
+import { Terminal, Menu, X, ArrowUpRight, FileText } from "lucide-react";
 import { GithubIcon, LinkedinIcon } from "./Icons";
 
 export function Navbar() {
@@ -16,7 +16,10 @@ export function Navbar() {
 
   const navLinks = [
     { label: "WORK", href: "#work" },
+    { label: "EXPERIENCE", href: "#experience" },
+    { label: "CAPABILITIES", href: "#capabilities" },
     { label: "ABOUT", href: "#about" },
+    { label: "EDUCATION", href: "#education" },
     { label: "LAB", href: "#lab" },
     { label: "CONTACT", href: "#contact" },
   ];
@@ -25,7 +28,7 @@ export function Navbar() {
     <header
       className={`fixed top-0 left-0 right-0 z-40 transition-all duration-300 ${
         scrolled
-          ? "bg-slate-950/85 backdrop-blur-md border-b border-slate-800/80 py-3.5 shadow-xl shadow-black/40"
+          ? "bg-slate-950/90 backdrop-blur-md border-b border-slate-800/80 py-3 shadow-xl shadow-black/40"
           : "bg-transparent py-5"
       }`}
     >
@@ -48,8 +51,8 @@ export function Navbar() {
         </a>
 
         {/* Desktop Nav */}
-        <nav className="hidden md:flex items-center gap-8">
-          <ul className="flex items-center gap-6 font-mono-code text-xs tracking-wider">
+        <nav className="hidden lg:flex items-center gap-6">
+          <ul className="flex items-center gap-5 font-mono-code text-[11px] tracking-wider">
             {navLinks.map((link) => (
               <li key={link.label}>
                 <a
@@ -62,7 +65,17 @@ export function Navbar() {
             ))}
           </ul>
 
-          <div className="flex items-center gap-3 pl-6 border-l border-slate-800">
+          <div className="flex items-center gap-2.5 pl-5 border-l border-slate-800">
+            <a
+              href="/cv/hector-lopez-cv.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-slate-900 border border-slate-800 text-slate-300 font-mono-code text-xs hover:text-white hover:border-slate-700 transition-colors"
+            >
+              <FileText className="size-3 text-cyan-400" />
+              <span>CV.PDF</span>
+            </a>
+
             <a
               href="https://github.com/hectorx24"
               target="_blank"
@@ -92,49 +105,60 @@ export function Navbar() {
         </nav>
 
         {/* Mobile Hamburger Button */}
-        <button
-          onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-          aria-label="Toggle navigation menu"
-          className="md:hidden p-2 rounded-lg bg-slate-900 border border-slate-800 text-slate-400 hover:text-white"
-        >
-          {mobileMenuOpen ? <X className="size-5" /> : <Menu className="size-5" />}
-        </button>
+        <div className="flex items-center gap-2 lg:hidden">
+          <a
+            href="/cv/hector-lopez-cv.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-1 px-2.5 py-1.5 rounded-lg bg-slate-900 border border-slate-800 text-cyan-300 font-mono-code text-xs"
+          >
+            <FileText className="size-3" />
+            <span>CV</span>
+          </a>
+
+          <button
+            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+            aria-label="Toggle navigation menu"
+            className="p-2 rounded-lg bg-slate-900 border border-slate-800 text-slate-400 hover:text-white"
+          >
+            {mobileMenuOpen ? <X className="size-5" /> : <Menu className="size-5" />}
+          </button>
+        </div>
       </div>
 
-      {/* Mobile Drawer */}
+      {/* Mobile Drawer Menu */}
       {mobileMenuOpen && (
-        <div className="md:hidden px-6 pt-4 pb-6 bg-slate-950/95 border-b border-slate-800 backdrop-blur-xl">
-          <ul className="flex flex-col gap-4 font-mono-code text-sm">
+        <div className="lg:hidden bg-slate-950/95 backdrop-blur-xl border-b border-slate-800 px-6 py-6 animate-in slide-in-from-top-2 duration-200">
+          <ul className="space-y-4 font-mono-code text-sm">
             {navLinks.map((link) => (
               <li key={link.label}>
                 <a
                   href={link.href}
                   onClick={() => setMobileMenuOpen(false)}
-                  className="block text-slate-300 hover:text-white py-1"
+                  className="block text-slate-300 hover:text-white transition-colors py-1"
                 >
                   {link.label}
                 </a>
               </li>
             ))}
           </ul>
-          <div className="flex items-center gap-3 mt-6 pt-6 border-t border-slate-850">
+
+          <div className="mt-6 pt-6 border-t border-slate-800/80 flex flex-wrap items-center gap-3 font-mono-code text-xs">
             <a
-              href="https://github.com/hectorx24"
+              href="/cv/hector-lopez-cv.pdf"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-2 px-3 py-2 rounded-lg bg-slate-900 border border-slate-800 text-slate-300 text-xs font-mono-code"
+              className="flex items-center gap-2 px-4 py-2 rounded-lg bg-cyan-950/50 border border-cyan-500/40 text-cyan-200"
             >
-              <GithubIcon className="size-4" />
-              <span>GitHub</span>
+              <FileText className="size-3.5" />
+              <span>Download Résumé (PDF)</span>
             </a>
             <a
-              href="https://www.linkedin.com/in/h%C3%A9ctor-enrique-l%C3%B3pez-carrazco-41b507428"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center gap-2 px-3 py-2 rounded-lg bg-slate-900 border border-slate-800 text-slate-300 text-xs font-mono-code"
+              href="mailto:founder@aeternalabs.lat"
+              className="flex items-center gap-1.5 px-4 py-2 rounded-lg bg-white text-slate-950 font-bold"
             >
-              <LinkedinIcon className="size-4" />
-              <span>LinkedIn</span>
+              <span>Email Founder</span>
+              <ArrowUpRight className="size-3.5" />
             </a>
           </div>
         </div>

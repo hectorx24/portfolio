@@ -53,7 +53,7 @@ export function WorkSection() {
 
                 <div className="absolute bottom-4 left-4 right-4 flex items-center justify-between text-xs font-mono-code text-white">
                   <span className="px-3 py-1 rounded-full bg-slate-950/80 border border-slate-700 backdrop-blur-md">
-                    Click to inspect case study
+                    Click to inspect case study {project.gallery.length > 1 ? `· ${project.gallery.length} screens` : ""}
                   </span>
                   <span className="p-2 rounded-full bg-white text-slate-950 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform">
                     <ArrowUpRight className="size-4" />
