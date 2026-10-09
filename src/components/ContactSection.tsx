@@ -1,5 +1,5 @@
 import { Mail, ArrowUpRight, Terminal, Globe, MapPin } from "lucide-react";
-import { GithubIcon } from "./Icons";
+import { GithubIcon, LinkedinIcon } from "./Icons";
 
 export function ContactSection() {
   return (
@@ -35,12 +35,12 @@ export function ContactSection() {
           {/* Right Column / Direct Actions */}
           <div className="lg:col-span-5 flex flex-col gap-3">
             <a
-              href="mailto:hector@aeternalabs.lat"
+              href="mailto:founder@aeternalabs.lat"
               className="inline-flex items-center justify-between p-4 rounded-2xl bg-white text-slate-950 font-bold text-sm hover:bg-slate-200 transition-all shadow-lg active:scale-98"
             >
               <div className="flex items-center gap-3">
                 <Mail className="size-4" />
-                <span>hector@aeternalabs.lat</span>
+                <span>founder@aeternalabs.lat</span>
               </div>
               <ArrowUpRight className="size-4" />
             </a>
@@ -54,6 +54,19 @@ export function ContactSection() {
               <div className="flex items-center gap-3">
                 <GithubIcon className="size-4" />
                 <span>github.com/hectorx24</span>
+              </div>
+              <ArrowUpRight className="size-4" />
+            </a>
+
+            <a
+              href="https://www.linkedin.com/in/h%C3%A9ctor-enrique-l%C3%B3pez-carrazco-41b507428"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-between p-4 rounded-2xl bg-slate-950/80 border border-slate-800 text-slate-300 font-mono text-xs hover:text-white hover:border-slate-700 transition-all"
+            >
+              <div className="flex items-center gap-3">
+                <LinkedinIcon className="size-4" />
+                <span>linkedin.com/in/héctor-enrique-lópez</span>
               </div>
               <ArrowUpRight className="size-4" />
             </a>

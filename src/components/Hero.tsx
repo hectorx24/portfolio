@@ -94,7 +94,9 @@ export function Hero() {
           <img
             src="/profile/whoami-terminal.svg"
             alt="Héctor López System Terminal Profile"
-            className="w-full h-auto rounded-2xl block shadow-inner"
+            width={960}
+            height={400}
+            className="w-full h-auto aspect-[12/5] rounded-2xl block shadow-inner"
             loading="eager"
           />
         </div>
