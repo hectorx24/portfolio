@@ -1,0 +1,74 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --bg: #090d16;
+    --paper: #0e1424;
+    --paper-card: #131b2e;
+    --paper-border: #1f2c47;
+    --paper-subtle: #172238;
+    --accent: #f78ca0;
+    --accent-glow: rgba(247, 140, 160, 0.18);
+    --lavender: #c9b1d9;
+    --cyan: #76d8d2;
+    --amber: #f3d29b;
+    --text-primary: #f5eff5;
+    --text-muted: #8c9bb4;
+    --text-subtle: #586782;
+  }
+
+  body {
+    background-color: var(--bg);
+    color: var(--text-primary);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  ::selection {
+    background: rgba(247, 140, 160, 0.28);
+    color: #ffffff;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #090d16;
+}
+::-webkit-scrollbar-thumb {
+  background: #1f2c47;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #34476e;
+}
+
+/* Monospace font classes */
+.font-mono-code {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+}
+
+/* Glow & Glass Utilities */
+.glass-panel {
+  background: rgba(19, 27, 46, 0.7);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.terminal-card {
+  background: #0d1424;
+  border: 1px solid #1f2c47;
+  box-shadow: 0 16px 36px -12px rgba(0, 0, 0, 0.65);
+}
+
+/* CRT Scanlines subtle effect */
+.crt-overlay {
+  background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%), linear-gradient(90deg, rgba(255, 0, 0, 0.03), rgba(0, 255, 0, 0.01), rgba(0, 0, 255, 0.03));
+  background-size: 100% 3px, 6px 100%;
+}
