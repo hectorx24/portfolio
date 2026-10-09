@@ -92,8 +92,8 @@ export function Hero() {
         {/* Live System Terminal Profile Preview */}
         <div className="mt-12 max-w-3xl mx-auto rounded-3xl overflow-hidden border border-slate-800/80 bg-slate-950/70 shadow-2xl backdrop-blur-xl p-2 sm:p-3 hover:border-indigo-500/40 transition-all">
           <img
-            src="/profile/banner-dark.v9.svg"
-            alt="Héctor López Vim Terminal Profile"
+            src="/profile/whoami-terminal.svg"
+            alt="Héctor López System Terminal Profile"
             className="w-full h-auto rounded-2xl block shadow-inner"
             loading="eager"
           />
