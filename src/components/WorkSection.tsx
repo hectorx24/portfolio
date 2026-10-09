@@ -47,7 +47,7 @@ export function WorkSection() {
                   src={project.heroImage}
                   alt={`${project.title} screenshot`}
                   className="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-105"
-                  loading="lazy"
+                  loading="eager"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent opacity-80 group-hover:opacity-60 transition-opacity" />
 
@@ -178,7 +178,7 @@ export function WorkSection() {
             >
               <div>
                 <div className="aspect-video rounded-xl overflow-hidden bg-slate-900 mb-5 border border-slate-850">
-                  <img src={p.image} alt={p.title} className="w-full h-full object-cover" loading="lazy" />
+                  <img src={p.image} alt={p.title} className="w-full h-full object-cover" loading="eager" />
                 </div>
                 <div className="flex items-center justify-between mb-2">
                   <span className="font-bold text-lg text-white">{p.title}</span>
