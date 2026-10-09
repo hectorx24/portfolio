@@ -1,6 +1,7 @@
 import { Navbar } from "./components/Navbar";
 import { Hero } from "./components/Hero";
 import { WorkSection } from "./components/WorkSection";
+import { ResearchSection } from "./components/ResearchSection";
 import { ExperienceSection } from "./components/ExperienceSection";
 import { CapabilitiesSection } from "./components/CapabilitiesSection";
 import { AboutSection } from "./components/AboutSection";
@@ -11,7 +12,7 @@ import { BackgroundCanvas } from "./components/BackgroundCanvas";
 
 export default function App() {
   return (
-    <div className="min-h-screen bg-[#070a11] text-[#f5eff5] selection:bg-pink-500/20 selection:text-white relative">
+    <div className="min-h-screen bg-[#030712] text-[#f8fafc] selection:bg-indigo-500/30 selection:text-white relative font-sans antialiased">
       {/* Interactive Physics Canvas Background */}
       <BackgroundCanvas />
 
@@ -22,6 +23,7 @@ export default function App() {
       <main className="relative z-10">
         <Hero />
         <WorkSection />
+        <ResearchSection />
         <ExperienceSection />
         <CapabilitiesSection />
         <AboutSection />

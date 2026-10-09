@@ -1,133 +1,148 @@
-import { ArrowDown, Terminal, ExternalLink, FileText, Sparkles, Briefcase, GraduationCap } from "lucide-react";
+import { motion } from "framer-motion";
+import { ArrowDown, Database } from "lucide-react";
 import { GithubIcon } from "./Icons";
 
 export function Hero() {
   return (
-    <section className="relative pt-32 pb-20 md:pt-44 md:pb-28 px-6 max-w-6xl mx-auto overflow-hidden">
-      {/* Background ambient radial highlight */}
-      <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[700px] bg-gradient-to-tr from-cyan-500/10 via-purple-500/5 to-pink-500/10 rounded-full blur-3xl pointer-events-none -z-10" />
+    <section className="relative min-h-[92vh] flex flex-col justify-center items-center px-6 pt-24 pb-16 overflow-hidden">
+      {/* Ambient Radial Gradient Mesh */}
+      <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[750px] h-[450px] bg-gradient-to-tr from-indigo-500/10 via-cyan-500/10 to-transparent blur-[140px] rounded-full pointer-events-none" />
 
-      {/* Top Editorial Eyebrow Badges */}
-      <div className="flex flex-wrap items-center gap-2 mb-6 font-mono-code text-xs">
-        <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-slate-900/90 border border-slate-800 text-slate-300">
-          <span className="size-2 rounded-full bg-emerald-400 animate-pulse" />
-          <span>FOUNDER &amp; DEVELOPER @ AETERNA LABS</span>
-        </div>
-        <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-amber-500/10 border border-amber-500/20 text-amber-300">
-          <GraduationCap className="size-3" />
-          <span>LIC. ADMINISTRACIÓN DE EMPRESAS · ITSON '24</span>
-        </div>
-        <div className="hidden sm:inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-slate-900/60 border border-slate-850 text-slate-400">
-          <Briefcase className="size-3 text-cyan-400" />
-          <span>ESTRATEGIA DIGITAL &amp; IA</span>
-        </div>
-      </div>
-
-      {/* Main Editorial Headline */}
-      <div className="space-y-6 max-w-4xl">
-        <div className="flex items-center gap-2 text-cyan-400 font-mono-code text-xs tracking-widest uppercase">
-          <span>:: MULTIDISCIPLINARY BUILDER &amp; PRODUCT ARCHITECT ::</span>
-        </div>
-
-        <h1 className="text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-black tracking-tight text-white leading-[1.02]">
-          HÉCTOR LÓPEZ
-        </h1>
-
-        <p className="text-xl sm:text-2xl md:text-3xl text-slate-300 font-light leading-snug text-balance">
-          I build <span className="text-white font-medium underline decoration-cyan-400/60 underline-offset-8">AI products</span>, unusual interfaces, and <span className="text-white font-medium underline decoration-pink-400/60 underline-offset-8">software experiments</span>.
-        </p>
-
-        <p className="text-slate-400 text-base md:text-lg max-w-2xl leading-relaxed font-normal">
-          Operating at the convergence of <strong className="text-slate-200">business administration, consumer psychology, multiplatform content creation, and technical software engineering</strong>. Solitary builder ethos: rapid prototyping, strict schema contracts, and finished code verified on real runtimes.
-        </p>
-      </div>
-
-      {/* CTA Action Row */}
-      <div className="mt-10 flex flex-wrap items-center gap-3 sm:gap-4">
-        <a
-          href="#work"
-          className="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl bg-white text-slate-950 font-bold text-sm hover:bg-slate-200 transition-all shadow-lg shadow-white/10"
+      <div className="max-w-4xl mx-auto w-full text-center relative z-10">
+        {/* Status Pills */}
+        <motion.div
+          initial={{ opacity: 0, y: -10 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+          className="flex flex-wrap items-center justify-center gap-2.5 mb-8"
         >
-          <span>Explore Selected Work</span>
-          <ArrowDown className="size-4" />
-        </a>
+          <span className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full text-xs font-mono bg-slate-900/80 border border-slate-800 text-slate-300 backdrop-blur-md shadow-sm">
+            <span className="size-2 rounded-full bg-emerald-400 animate-pulse" />
+            Founder &amp; Developer @ Aeterna Labs
+          </span>
 
-        {/* View / Download Résumé CTA */}
-        <a
-          href="/cv/hector-lopez-cv.pdf"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="inline-flex items-center gap-2 px-5 py-3.5 rounded-xl bg-cyan-950/40 border border-cyan-500/40 text-cyan-200 font-semibold text-sm hover:bg-cyan-900/40 hover:border-cyan-400 transition-all group"
+          <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-mono bg-slate-900/80 border border-slate-800 text-slate-300 backdrop-blur-md shadow-sm">
+            <span className="size-1.5 rounded-full bg-indigo-400" />
+            B.A. Business Administration · ITSON &apos;24
+          </span>
+
+          <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-mono bg-slate-900/80 border border-slate-800 text-slate-300 backdrop-blur-md shadow-sm">
+            <span className="size-1.5 rounded-full bg-cyan-400" />
+            Digital Strategy &amp; AI Systems
+          </span>
+        </motion.div>
+
+        {/* Main Monolithic Headline */}
+        <motion.div
+          initial={{ opacity: 0, scale: 0.96 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.6, delay: 0.1 }}
+          className="space-y-4"
         >
-          <FileText className="size-4 text-cyan-400 group-hover:scale-110 transition-transform" />
-          <span>View Résumé (PDF)</span>
-          <ExternalLink className="size-3.5 text-cyan-400 opacity-70 group-hover:opacity-100" />
-        </a>
-
-        <a
-          href="#lab"
-          className="inline-flex items-center gap-2 px-5 py-3.5 rounded-xl bg-slate-900 border border-slate-800 text-slate-200 font-medium text-sm hover:bg-slate-850 hover:border-slate-700 transition-colors"
-        >
-          <Terminal className="size-4 text-pink-400" />
-          <span>Digital Lab</span>
-        </a>
-
-        <a
-          href="https://github.com/hectorx24"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="inline-flex items-center gap-2 px-4 py-3.5 rounded-xl text-slate-400 hover:text-white transition-colors text-sm font-mono-code"
-        >
-          <GithubIcon className="size-4" />
-          <span>@hectorx24</span>
-          <ExternalLink className="size-3.5" />
-        </a>
-      </div>
-
-      {/* Quick Summary Strip */}
-      <div className="mt-8 pt-6 border-t border-slate-800/80 flex flex-wrap items-center justify-between gap-4 text-xs font-mono-code text-slate-400">
-        <div className="flex flex-wrap items-center gap-4 sm:gap-6">
-          <span className="flex items-center gap-1.5 text-slate-300">
-            <span className="text-cyan-400">✦</span> 4 Featured Case Studies
-          </span>
-          <span className="flex items-center gap-1.5 text-slate-300">
-            <span className="text-pink-400">✦</span> 4 Verified Professional Roles
-          </span>
-          <span className="flex items-center gap-1.5 text-slate-300">
-            <span className="text-amber-400">✦</span> ITSON Business Admin Degree
-          </span>
-          <span className="flex items-center gap-1.5 text-slate-300">
-            <span className="text-emerald-400">✦</span> Real TV Hardware Tested
-          </span>
-        </div>
-        <span className="text-[11px] text-slate-500">
-          SONORA, MX // PACIFIC TIME (GMT-7)
-        </span>
-      </div>
-
-      {/* Terminal Hero Artifact Showcase */}
-      <div className="mt-12 rounded-2xl border border-slate-800 bg-slate-950/80 p-3 sm:p-5 shadow-2xl relative overflow-hidden">
-        <div className="flex items-center justify-between pb-3 mb-3 border-b border-slate-850 px-2 font-mono-code text-xs text-slate-400">
-          <div className="flex items-center gap-2">
-            <span className="size-2.5 rounded-full bg-red-500/80" />
-            <span className="size-2.5 rounded-full bg-amber-500/80" />
-            <span className="size-2.5 rounded-full bg-emerald-500/80" />
-            <span className="ml-2 text-slate-400 hidden sm:inline">aeterna-labs://hector-terminal</span>
+          <div className="font-mono text-xs uppercase tracking-widest text-indigo-400 font-semibold">
+            :: MULTIDISCIPLINARY BUILDER &amp; PRODUCT ARCHITECT ::
           </div>
-          <div className="flex items-center gap-2 text-[11px] text-cyan-400">
-            <Sparkles className="size-3" />
-            <span>LIVE SYSTEM IDENTITY // 1-BIT DITHER</span>
-          </div>
-        </div>
+          <h1 className="text-5xl sm:text-7xl lg:text-8xl font-black tracking-tight text-white">
+            HÉCTOR LÓPEZ
+          </h1>
+          <p className="text-xl sm:text-2xl text-slate-300 max-w-2xl mx-auto font-light leading-relaxed">
+            I build <span className="text-white font-medium underline decoration-indigo-500 underline-offset-4">AI products</span>, unusual interfaces, and <span className="text-white font-medium underline decoration-cyan-400 underline-offset-4">autonomous simulations</span>.
+          </p>
+        </motion.div>
 
-        <div className="rounded-xl overflow-hidden bg-black/60 flex items-center justify-center">
-          <img
-            src="/profile/banner-dark.v9.svg"
-            alt="Héctor López live system profile with 1-bit Floyd-Steinberg dithered portrait and terminal profile"
-            className="w-full h-auto max-h-[460px] object-contain rounded-lg"
-            loading="eager"
-          />
-        </div>
+        {/* Concise Narrative Bio */}
+        <motion.p
+          initial={{ opacity: 0, y: 10 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.2 }}
+          className="mt-6 text-slate-400 text-base sm:text-lg max-w-2xl mx-auto leading-relaxed"
+        >
+          Operating at the intersection of <strong className="text-slate-200 font-semibold">business administration</strong>, <strong className="text-slate-200 font-semibold">consumer psychology</strong>, <strong className="text-slate-200 font-semibold">multiplatform media</strong>, and <strong className="text-slate-200 font-semibold">technical software engineering</strong>. Solitary builder ethos: rapid prototyping, strict schema contracts, and finished code verified on real runtimes.
+        </motion.p>
+
+        {/* Action CTAs */}
+        <motion.div
+          initial={{ opacity: 0, y: 15 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.3 }}
+          className="mt-10 flex flex-wrap items-center justify-center gap-3.5"
+        >
+          <a
+            href="#work"
+            className="inline-flex items-center gap-2 px-6 py-3.5 rounded-2xl bg-white text-slate-950 font-bold text-sm hover:bg-slate-200 transition-all shadow-xl hover:shadow-white/10 active:scale-95"
+          >
+            <span>Explore Selected Work</span>
+            <ArrowDown className="size-4" />
+          </a>
+
+          <a
+            href="#research"
+            className="inline-flex items-center gap-2 px-6 py-3.5 rounded-2xl bg-indigo-500/10 border border-indigo-500/30 text-indigo-300 font-mono text-xs hover:bg-indigo-500/20 hover:border-indigo-500/50 transition-all backdrop-blur-md active:scale-95"
+          >
+            <Database className="size-4 text-indigo-400" />
+            <span>Applied Research Lab</span>
+          </a>
+
+          <a
+            href="https://github.com/hectorx24"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 px-5 py-3.5 rounded-2xl bg-slate-900/80 border border-slate-800 text-slate-300 font-mono text-xs hover:text-white hover:border-slate-700 transition-all backdrop-blur-md active:scale-95"
+          >
+            <GithubIcon className="size-4" />
+            <span>@hectorx24</span>
+          </a>
+        </motion.div>
+
+        {/* Quick Highlights Strip */}
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.6, delay: 0.4 }}
+          className="mt-12 pt-8 border-t border-slate-800/80 flex flex-wrap items-center justify-center gap-x-8 gap-y-2 text-xs font-mono text-slate-400"
+        >
+          <span className="flex items-center gap-1.5">
+            <span className="text-cyan-400 font-bold">✦</span> 4 Flagship Case Studies
+          </span>
+          <span className="flex items-center gap-1.5">
+            <span className="text-indigo-400 font-bold">✦</span> 3 Research Data Labs
+          </span>
+          <span className="flex items-center gap-1.5">
+            <span className="text-emerald-400 font-bold">✦</span> ITSON Business Degree
+          </span>
+          <span className="flex items-center gap-1.5">
+            <span className="text-purple-400 font-bold">✦</span> Real Hardware TV Tested
+          </span>
+        </motion.div>
+
+        {/* Dither Terminal Window Preview */}
+        <motion.div
+          initial={{ opacity: 0, y: 25 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.7, delay: 0.5 }}
+          className="mt-12 rounded-3xl border border-slate-800 bg-slate-950/70 p-4 sm:p-6 backdrop-blur-xl shadow-2xl relative overflow-hidden"
+        >
+          <div className="flex items-center justify-between pb-3 mb-4 border-b border-slate-800/80 text-xs font-mono text-slate-400">
+            <div className="flex items-center gap-2">
+              <span className="size-2.5 rounded-full bg-red-500/80 inline-block" />
+              <span className="size-2.5 rounded-full bg-yellow-500/80 inline-block" />
+              <span className="size-2.5 rounded-full bg-green-500/80 inline-block" />
+              <span className="ml-2 text-slate-300">aeterna-labs://hector-identity</span>
+            </div>
+            <div className="text-[11px] text-indigo-400">
+              ✦ LIVE SYSTEM IDENTITY // 1-BIT DITHER
+            </div>
+          </div>
+
+          <div className="aspect-[21/9] sm:aspect-[2.2/1] rounded-2xl overflow-hidden border border-slate-850 bg-black relative">
+            <img
+              src="/profile/hector-dither-banner.png"
+              alt="Héctor López terminal identity map"
+              className="w-full h-full object-cover object-center"
+              loading="eager"
+            />
+          </div>
+        </motion.div>
       </div>
     </section>
   );
