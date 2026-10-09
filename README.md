@@ -1,6 +1,7 @@
 # Héctor López — Personal Portfolio
 
 [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com)
+[![Live Site](https://img.shields.io/badge/Live-hector--portfolio-00f0ff?logo=vercel&logoColor=white)](https://hector-portfolio-sigma.vercel.app)
 [![GitHub](https://img.shields.io/badge/GitHub-hectorx24-181717?logo=github)](https://github.com/hectorx24)
 [![Studio](https://img.shields.io/badge/Studio-Aeterna%20Labs-00f0ff)](https://www.aeternalabs.lat)
 
@@ -12,7 +13,7 @@ Official personal portfolio for **Héctor López** — Founder of [Aeterna Labs]
 
 ## ✦ Overview
 
-This repository powers the live personal portfolio at `https://hector-portfolio.vercel.app` (or custom domain). It showcases real, compiled, and hardware-tested systems across AI cognitive introspection, CRT terminal game loops, executive dysfunction support, and 10-foot television ergonomics.
+This repository powers the live personal portfolio at **[https://hector-portfolio-sigma.vercel.app](https://hector-portfolio-sigma.vercel.app)**. It showcases real, compiled, and hardware-tested systems across AI cognitive introspection, CRT terminal game loops, executive dysfunction support, and 10-foot television ergonomics.
 
 ### Featured Projects & Case Studies
 1. **[Aura](https://github.com/hectorx24/portfolio)** — Local AI dream & subconscious analysis engine with strict privacy boundaries, Floyd-Steinberg dithered visuals, and archetype clustering.
